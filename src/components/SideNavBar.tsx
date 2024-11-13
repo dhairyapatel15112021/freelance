@@ -1,4 +1,4 @@
-import { useContext } from 'react'
+import { memo, useContext } from 'react'
 import { NavLink } from 'react-router-dom';
 import { OpenContext } from '../App';
 import { useMobile } from '../hooks/useMobile';
@@ -7,11 +7,12 @@ import instagramSVG from "../assets/instagram.svg";
 import youtubeSVG from "../assets/youtube.svg";
 import removeIcon from "../assets/removeIcon.svg";
 
-export const SideNavBar = () => {
+export const SideNavBar = memo(() => {
     const context = useContext(OpenContext);
     const isMobile = useMobile();
     if (!context) {
-      throw new Error("SomeComponent must be used within a OpenContext.Provider");
+        console.warn("OpenContext is missing, defaulting to closed");
+        return null; 
     }
     const { setIsOpen } = context;
     const handleOnClick = () => {
@@ -26,16 +27,16 @@ export const SideNavBar = () => {
                     <NavLink onClick={handleOnClick} to="/service" className={({isActive})=> `${isActive ? `font-semibold` : `font-thin`} font-poppins tracking-wide text-xl`}> Our Services </NavLink>
                 </div>
                 <div className='flex gap-x-4'>
-                    <div><img src={phoneSVG} alt="phone" /></div>
-                    <div><img src={instagramSVG} alt="instagram" /></div>
-                    <div><img src={youtubeSVG} alt="youtube" /></div>
+                    <div><img src={phoneSVG} alt="phone" loading="lazy" /></div>
+                    <div><img src={instagramSVG} alt="instagram" loading="lazy" /></div>
+                    <div><img src={youtubeSVG} alt="youtube" loading="lazy" /></div>
                 </div>
                {
                 !isMobile && <div className='absolute top-[5%] left-[90%]' onClick={handleOnClick}>
-                    <img src={removeIcon} alt="" />
+                    <img src={removeIcon} alt="removeIcon" loading="lazy" />
                 </div>
                }
             </div>
         </div>
     )
-}
+})

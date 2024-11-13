@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { useDebouce } from './useDebouce';
 
 export const useMobile = () => {
     const [isMobile,setMobile] = useState(window.innerWidth >= 767);
@@ -9,5 +10,5 @@ export const useMobile = () => {
         return () => window.removeEventListener("resize",checkIsMobile);
     },[]);
 
-  return (isMobile)
+  return useDebouce(isMobile,200);
 }
