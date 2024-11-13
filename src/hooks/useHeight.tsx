@@ -6,8 +6,6 @@ export const useHeight = () => {
   function checkScrollPosition() {
     const scrollPosition = window.scrollY;
     const viewportHeight = window.innerHeight;
-
-    // Check if 200vh has been reached
     if (scrollPosition >= 2 * viewportHeight) {
       setIsHeight(true);
     } else {

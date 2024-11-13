@@ -20,11 +20,9 @@ export const Home = () => {
     const handleScroll = () => {
       const scrollY = window.scrollY;
       const windowHeight = window.innerHeight;
-      setHeight(windowHeight* 3 - scrollY);
+      setHeight(((windowHeight* 3 - scrollY)/windowHeight)*100 - 20);
     };
-  
     window.addEventListener('scroll', handleScroll);
-  
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
@@ -35,11 +33,10 @@ export const Home = () => {
   return (
     <div>
       <div className="bg-none md:bg-gradient-to-r from-[#000000] from-[40%] to-[#666666] text-white bg-red-600">
-        <div className={`${isHeight ? `absolute` : `sticky`} top-0 left-0 z-10`}>
+        <div className="sticky top-0 left-0 z-10">
             <Header />
             <SideSection />
             <div className="absolute left-[45%] md:left-1/2" style={{ top: isHeight ? `${height}vh` : '80vh' }} >
-            {/* className={`absolute left-[45%] md:left-1/2 ${isHeight ? `top-[${height}vh]` : `top-[80vh]`}`} */}
               <Link onClick={handleClick} className="cursor-pointer" activeClass="!font-bold" spy={true} smooth={true} duration={500} to={data[index].id}><img src={navigateIcon} alt="naviagte icon" loading="lazy" /> </Link>
             </div>
         </div>
