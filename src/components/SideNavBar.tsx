@@ -15,8 +15,8 @@ export const SideNavBar = memo(() => {
         return null; 
     }
     const { setIsOpen } = context;
-    const handleOnClick = () => {
-      setIsOpen((prev) => !prev);
+    const handleOnClick = () : void => {
+      setIsOpen((prev : boolean) => !prev);
     }
     return (
         <div className='fixed top-0 left-0 h-[100vh] w-[100vw] md:w-[40vw] bg-black flex items-center justify-center z-20'>

@@ -5,24 +5,21 @@ import menuIcon from "../assets/menuIcon.svg";
 import removeIcon from "../assets/removeIcon.svg";
 import { useMobile } from "../hooks/useMobile";
 import { OpenContext } from "../App";
-import { useHome } from "../hooks/useHome";
 
 export const Header = memo(() => {
   const isMobile = useMobile();
-  const isHome = useHome();
   const context = useContext(OpenContext);
-  
   if (!context) {
     console.warn("OpenContext is missing, defaulting to closed");
     return null;
   }
   const { isOpen, setIsOpen } = context;
-  const handleOnClick = () => {
-    setIsOpen((prev: any) => !prev);
+  const handleOnClick = () : void => {
+    setIsOpen((prev: boolean) => !prev);
   }
 
   return (
-    <div className={`absolute top-0 left-0 w-[100%] grid grid-cols-3 place-items-center py-6 z-10 ${!isHome ? `bg-black` : "bg-none"}`}>
+    <div className={`absolute top-0 left-0 w-[100%] grid grid-cols-3 place-items-center py-6 z-10`}>
       <div className="flex gap-x-2 col-start-1 mx-4 md:mx-0 md:col-start-2">
         <div>
           <img src={dlogo} alt="logo" loading="lazy" />
