@@ -38,16 +38,16 @@ export const OurServiceHomeContent = (inputData : data) => {
         </div>
         <div className='w-[80vw] mx-[10vw] md:mx-0 mt-[5vh] md:mt-0 md:w-[40vw] h-[40vh] md:h-full grid grid-rows-3 grid-cols-3'>
             <div className= "w-full h-full">
-              <img src={contentData[inputData.index].first} alt="first" className="w-full h-full rounded-md" />
+              <img src={contentData[inputData.index].first} alt="first" className="w-full h-full rounded-md drop-shadow-shadow" />
             </div>
             <div className=" w-full h-full">
-              <img src={contentData[inputData.index].second} alt="second" className="w-full h-full rounded-md"  />
+              <img src={contentData[inputData.index].second} alt="second" className="w-full h-full rounded-md drop-shadow-shadow"  />
             </div>
             <div className=" w-full h-full">
-              <img src={contentData[inputData.index].third} alt="third" className="w-full h-full rounded-md" />
+              <img src={contentData[inputData.index].third} alt="third" className="w-full h-full rounded-md drop-shadow-shadow" />
             </div>
             <div className='row-span-2 col-span-3 w-full h-full'>
-              <img src={contentData[inputData.index].fourth} alt="fourth" className="w-full h-full rounded-md"   />
+              <img src={contentData[inputData.index].fourth} alt="fourth" className="w-full h-full rounded-md drop-shadow-shadow"   />
             </div>
         </div>
     </div>

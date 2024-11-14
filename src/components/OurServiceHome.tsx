@@ -7,7 +7,7 @@ export const OurServiceHome = () => {
         {title:"Dance Choreography",description:"From Bollywood to folk, make your event come alive with our curated dance performances.",index:3}]
     return (
         <div className="flex flex-col justify-center items-center mt-14 mx-[10vw]">
-                <div className='sticky top-[5vh] left-0 self-start md:self-center font-cormorant text-5xl font-medium'>Our Services</div>
+                <div className='sticky top-[5vh] left-0 z-10 self-start md:self-center font-cormorant text-5xl font-medium'>Our Services</div>
                 {/* backdrop-blur-md w-full flex justify-center items-center */}
                 <div>
                     {
