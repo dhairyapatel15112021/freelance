@@ -29,25 +29,25 @@ export const OurServiceHomeContent = (inputData : data) => {
   {first : dance_1 , second : dance_2 , third : dance_3 , fourth : dance_4}];
   return (
     <div className='w-[100vw] h-[70vh] my-6 md:my-16 flex flex-col md:flex-row'>
-        <div className='w-[100vw] md:w-[50vw] h-[20vh] md:h-[100%] flex justify-center items-center'>
+        <div className='w-[100vw] md:w-[50vw] h-[20vh] md:h-full flex justify-center items-center'>
             <div className='w-[80vw] md:w-[20vw] flex flex-col gap-2'>
                 <div className='font-poppins font-semibold text-lg'>{inputData.title}</div>
                 <div className='font-poppins font-extralight text-base'>{inputData.description}</div>
                 <div className='font-poppins font-semibold text-lg'>Learn More</div>
             </div>
         </div>
-        <div className='w-[80vw] mx-[10vw] md:mx-0 mt-[5vh] md:mt-0 md:w-[40vw] h-[40vh] md:h-[100%] grid grid-rows-3 grid-cols-3 gap-x-3 gap-y-4'>
-            <div className="w-[100%] h-[100%] bg-red-400">
-              <img src={contentData[inputData.index].first} alt="first" className="w-[100%] h-[100%]" />
+        <div className='w-[80vw] mx-[10vw] md:mx-0 mt-[5vh] md:mt-0 md:w-[40vw] h-[40vh] md:h-full grid grid-rows-3 grid-cols-3'>
+            <div className= "w-full h-full">
+              <img src={contentData[inputData.index].first} alt="first" className="w-full h-full rounded-md" />
             </div>
-            <div className="w-[100%] h-[100%] bg-red-400">
-              <img src={contentData[inputData.index].second} alt="second" className="w-[100%] h-[100%]"  />
+            <div className=" w-full h-full">
+              <img src={contentData[inputData.index].second} alt="second" className="w-full h-full rounded-md"  />
             </div>
-            <div className="w-[100%] h-[100%] bg-red-400">
-              <img src={contentData[inputData.index].third} alt="third" className="w-[100%] h-[100%]" />
+            <div className=" w-full h-full">
+              <img src={contentData[inputData.index].third} alt="third" className="w-full h-full rounded-md" />
             </div>
-            <div className='row-span-2 col-span-3 w-[100%] h-[100%] bg-red-400'>
-              <img src={contentData[inputData.index].fourth} alt="fourth" className="w-[100%] h-[100%]"   />
+            <div className='row-span-2 col-span-3 w-full h-full'>
+              <img src={contentData[inputData.index].fourth} alt="fourth" className="w-full h-full rounded-md"   />
             </div>
         </div>
     </div>
