@@ -31,7 +31,7 @@ export const OurServiceHomeContent = (inputData : data) => {
     {first : firework_1 , second : firework_2 , third : firework_3, fourth :firework_4},
   {first : dance_1 , second : dance_2 , third : dance_3 , fourth : dance_4}];
   return (
-    <motion.div style={{scale : inputData.scaleNumber , opacity : inputData.opacityNumber}} className='sticky top-[20vh] w-[100vw] h-[70vh] my-6 md:my-16 flex flex-col md:flex-row'>
+    <motion.div style={{scale : inputData.scaleNumber , opacity : inputData.opacityNumber}} className='sticky top-[15vh] md:top-[20vh] w-[100vw] h-[70vh] my-6 md:my-16 flex flex-col md:flex-row'>
         <div className='w-[100vw] md:w-[50vw] h-[20vh] md:h-full flex justify-center items-center'>
             <div className='w-[80vw] md:w-[20vw] flex flex-col gap-2'>
                 <div className='font-poppins font-semibold text-lg'>{inputData.title}</div>
