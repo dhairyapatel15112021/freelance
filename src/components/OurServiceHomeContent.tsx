@@ -14,11 +14,14 @@ import dance_1 from "../assets/home/dance/dance_1.png";
 import dance_2 from "../assets/home/dance/dance_2.png";
 import dance_3 from "../assets/home/dance/dance_3.png";
 import dance_4 from "../assets/home/dance/dance_4.png";
+import { motion, MotionValue } from "framer-motion";
 
 interface data {
   index : number,
   title : string,
-  description : string
+  description : string,
+  scaleNumber : MotionValue,
+  opacityNumber : MotionValue
 }
 
 export const OurServiceHomeContent = (inputData : data) => {
@@ -28,7 +31,7 @@ export const OurServiceHomeContent = (inputData : data) => {
     {first : firework_1 , second : firework_2 , third : firework_3, fourth :firework_4},
   {first : dance_1 , second : dance_2 , third : dance_3 , fourth : dance_4}];
   return (
-    <div className='w-[100vw] h-[70vh] my-6 md:my-16 flex flex-col md:flex-row'>
+    <motion.div style={{scale : inputData.scaleNumber , opacity : inputData.opacityNumber}} className='sticky top-[15vh] w-[100vw] h-[70vh] my-6 md:my-16 flex flex-col md:flex-row'>
         <div className='w-[100vw] md:w-[50vw] h-[20vh] md:h-full flex justify-center items-center'>
             <div className='w-[80vw] md:w-[20vw] flex flex-col gap-2'>
                 <div className='font-poppins font-semibold text-lg'>{inputData.title}</div>
@@ -50,6 +53,6 @@ export const OurServiceHomeContent = (inputData : data) => {
               <img src={contentData[inputData.index].fourth} alt="fourth" className="w-full h-full rounded-md drop-shadow-shadow"   />
             </div>
         </div>
-    </div>
+    </motion.div>
   )
 }
