@@ -20,6 +20,7 @@ export default {
       },
       animation : {
         ["infinite-slider"]: "infiniteSlider 20s linear infinite",
+        ["counter"]: 'counter 2s alternate ease-in-out forwards',
       },
       keyframes : {
         infiniteSlider: {
@@ -27,6 +28,10 @@ export default {
           "100%": {
             transform: "translateX(calc(-250px * 5))",
           },
+        },
+        counter: {
+          '0%': { '--num': '0' },
+          '100%': { '--num': '15' },
         },
       },
       dropShadow : {

@@ -7,6 +7,7 @@ import { CompanyCarousel } from "../components/CompanyCarousel";
 import { useHeight } from "../hooks/useHeight";
 import { Header } from "../components/Header";
 import { OurServiceHome } from "../components/OurServiceHome";
+import { Information } from "../components/Information";
 
 export const Home = () => {
   const data = [{ id: "decor", title: "Crafting the Perfect Ambiance", subtitle: "From dazzling fireworks to immersive lighting, we create moments that leave a lasting impression.", index: 0 }, { id: "specialEffect", title: "Elevate the Experience", subtitle: "From dazzling fireworks to immersive lighting, we create moments that leave a lasting impression.", index: 1 }, { id: "choreo", title: "Making Every Step Count", subtitle: "Personalised dance routines designed to make your special day even more memorable.", index: 2 }];
@@ -38,6 +39,7 @@ export const Home = () => {
       </div>
       <CompanyCarousel />
       <OurServiceHome/>
+      <Information/>
     </div>
 
   )

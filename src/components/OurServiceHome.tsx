@@ -36,10 +36,8 @@ export const OurServiceHome = () => {
                 {
                     data.map((item,index) => {
                         return (
-                            <>
                             <OurServiceHomeContent scaleNumber = {animation[index+1].scale} opacityNumber = {animation[index+1].opacity} title={item.title} description={item.description} index={item.index} />
-                            {/* <div className="h-52"></div> add + (index + 1) * 208 */}
-                            </>
+                            
                         )
                     })
                 }

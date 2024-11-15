@@ -1,0 +1,19 @@
+/* Custom CSS for the counter */
+.counter-div {
+  counter-reset: num var(--num);
+  position: relative;
+}
+
+.counter-div::after {
+  content: counter(num);
+}
+
+@property --num {
+  syntax: "<integer>";
+  initial-value: 0;
+  inherits: false;
+}
+
+.counter-div {
+  --num: 0;
+}
