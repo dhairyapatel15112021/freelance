@@ -76,7 +76,7 @@ export const InformationDetails = () => {
                     })
                 }
             </div>
-            <div className='w-[80vw] md:w-[40vw] h-[50vh] grid grid-rows-3 grid-cols-1 gap-6'>
+            <div className='w-[80vw] md:w-[40vw] h-[40vh] md:h-[50vh] grid grid-rows-3 grid-cols-1 gap-6'>
                 {
                     descriptionData.map((item,index)=>{
                         return(
@@ -98,8 +98,8 @@ const DescriptionInformation = (inputData : data)  => {
 
     return (
         <div className='flex flex-col justify-evenly'>
-            <div className='font-poppins font-light md:font-medium text-2xl'>{inputData.title}</div>
-            <div className='font-poppins font-extralight md:font-light text-lg'>{inputData.subtitle}</div>
+            <div className='font-poppins font-light md:font-medium text-xl md:text-2xl'>{inputData.title}</div>
+            <div className='font-poppins font-extralight md:font-light text-base md:text-lg'>{inputData.subtitle}</div>
             <div className='h-[2px] bg-white'></div>
         </div>
     )

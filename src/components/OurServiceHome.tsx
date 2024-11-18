@@ -30,7 +30,7 @@ export const OurServiceHome = () => {
     }))
     return (
         <div ref={targetRef} className="flex flex-col justify-center items-center mt-14 mx-[10vw]">
-            <div className='sticky top-[5vh] left-0 z-10 self-start md:self-center font-cormorant text-5xl font-medium'>Our Services</div>
+            <div className='sticky top-[5vh] left-0 z-10 self-start md:self-center font-cormorant text-4xl md:text-5xl font-medium'>Our Services</div>
             {/* backdrop-blur-md w-full flex justify-center items-center */}
             <ReactLenis root>
                 {

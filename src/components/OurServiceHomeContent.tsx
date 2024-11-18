@@ -34,9 +34,9 @@ export const OurServiceHomeContent = (inputData : data) => {
     <motion.div style={{scale : inputData.scaleNumber , opacity : inputData.opacityNumber}} className='sticky top-[15vh] md:top-[20vh] w-[100vw] h-[70vh] my-6 md:my-16 flex flex-col md:flex-row'>
         <div className='w-[100vw] md:w-[50vw] h-[20vh] md:h-full flex justify-center items-center'>
             <div className='w-[80vw] md:w-[20vw] flex flex-col gap-2'>
-                <div className='font-poppins font-semibold text-lg'>{inputData.title}</div>
-                <div className='font-poppins font-extralight text-base'>{inputData.description}</div>
-                <div className='font-poppins font-semibold text-lg'>Learn More</div>
+                <div className='font-poppins text-base md:text-lg font-medium md:font-semibold'>{inputData.title}</div>
+                <div className='font-poppins text-sm md:text-base font-extralight md:font-light'>{inputData.description}</div>
+                <div className='font-poppins text-sm md:text-base font-medium md:font-semibold'>Learn More</div>
             </div>
         </div>
         <div className='w-[80vw] mx-[10vw] md:mx-0 mt-[5vh] md:mt-0 md:w-[40vw] h-[40vh] md:h-full grid grid-rows-3 grid-cols-3'>
