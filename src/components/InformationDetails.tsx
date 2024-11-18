@@ -98,7 +98,7 @@ const DescriptionInformation = (inputData : data)  => {
 
     return (
         <div className='flex flex-col justify-evenly'>
-            <div className='font-poppins font-medium md:font-semibold text-2xl'>{inputData.title}</div>
+            <div className='font-poppins font-light md:font-medium text-2xl'>{inputData.title}</div>
             <div className='font-poppins font-extralight md:font-light text-lg'>{inputData.subtitle}</div>
             <div className='h-[2px] bg-white'></div>
         </div>

@@ -1,6 +1,9 @@
+import { Image } from "../components/Service/Image"
 
 export const Services = () => {
   return (
-    <div>Services</div>
+    <div>
+      <Image/>
+    </div>
   )
 }
