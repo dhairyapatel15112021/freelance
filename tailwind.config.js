@@ -16,6 +16,10 @@ export default {
       backgroundColor : {
         "gradient" : "#666666"
       },
+      gridTemplateColumns : {
+        "new": "50% 25% 25%",
+      }
+      ,
       fontFamily : {
         poppins: ['Poppins', 'sans-serif'],
         cormorant: ['Cormorant', 'serif'],
@@ -38,7 +42,7 @@ export default {
       },
       dropShadow : {
         "shadow" : "2px 2px 5px #666666"
-      }
+      },
     },
   },
   plugins: [],

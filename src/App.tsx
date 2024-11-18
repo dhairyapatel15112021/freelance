@@ -3,6 +3,7 @@ import { Outlet } from "react-router-dom";
 import { Header } from "./components/Header";
 import { SideNavBar } from "./components/SideNavBar";
 import { useHome } from "./hooks/useHome";
+import { Footer } from "./components/Footer/Footer";
 
 interface OpenContextType {
   isOpen: boolean,
@@ -24,6 +25,7 @@ function App() {
         {isOpen && <SideNavBar />}
         <Outlet />
       </OpenContext.Provider>
+      <Footer/>
     </div>
   )
 }
