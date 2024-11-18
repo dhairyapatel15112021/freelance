@@ -8,7 +8,7 @@ export const AboutUs = () => {
     <div>
       <Image />
       <div className="flex justify-center items-center mt-20">
-        <div className="w-[80vw] text-center font-poppins font-extralight md:font-light text-sm md:text-base">
+        <div className="w-[80vw] text-left md:text-center font-poppins font-extralight md:font-light text-sm md:text-base">
           D Effects & Entertainment began with a passion for bringing people together through the joy of dance. Starting with wedding choreography, we helped couples create memorable moments on the dance floor. As our team grew, so did our services; we expanded into wedding décor and event styling, now transforming spaces with personalized décor and stunning special effects. Today, we are not just event planners – we’re storytellers who believe in creating magic with every detail. From unique décor and lighting to custom dance routines, every event we plan reflects your story, making each moment unforgettable.
         </div>
       </div>
