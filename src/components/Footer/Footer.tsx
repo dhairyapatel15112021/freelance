@@ -3,8 +3,14 @@ import instagram from "../../assets/footer/instagram.svg";
 import youtube from "../../assets/footer/youtube.svg";
 import logo from "../../assets/footer/footer_Logo.svg";
 import whatsapp from "../../assets/footer/whatsapp.svg";
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
+
 export const Footer = () => {
+
+    const copyToClipboard = async (text : string) => {
+        await navigator.clipboard.writeText(text);
+    }
+
     return (
         <div className='grid grid-cols-1 py-4 md:grid-cols-new grid-rows-3 gap-5 md:gap-0 md:grid-rows-1 mt-16 bg-gradient-to-b from-black via-[#101010] via-[20%] to-[#3E3E3E]'>
             <div>
@@ -33,10 +39,11 @@ export const Footer = () => {
                     <div className='flex gap-3'>
                         <img src={call} alt="call icon" />
                         <div className="flex gap-2">
-                            <div>+ 91 86908 93300</div>
+                            <div onClick={()=>copyToClipboard("+918690893300")} className="hover:cursor-pointer">+ 91 86908 93300</div>
                             <div>,</div>
-                            <div>+ 91 83307 18883</div>
+                            <div onClick={()=>copyToClipboard("+918330718883")} className="hover:cursor-pointer">+ 91 83307 18883</div>
                         </div>
+                        {/* <div className="absolute top-[100%] left-[50%]">copied</div> */}
                     </div>
                     <div className="flex gap-3">
                         <img src={instagram} alt="instagram icon" />
@@ -47,9 +54,9 @@ export const Footer = () => {
                         <div>/D effects Entertainment</div>
                     </div>
                 </div>
-                <div className="self-end">
+                <NavLink className="self-end" to="https://wa.me/8690893300" target="_blank">
                     <img src={whatsapp} alt="whatsapp icon" className="w-[70%]" />
-                </div>
+                </NavLink>
             </div>
         </div>
     )
