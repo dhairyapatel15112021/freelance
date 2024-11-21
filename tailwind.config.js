@@ -9,9 +9,9 @@ export default {
       backgroundImage : {
         "decor" : "url('/src/assets/home/decor.png')",
         "choreo" : "url('/src/assets/home/choreography.png')",
-        "specialEffects" : "url('src/assets/home/specialEffects.png')",
-        "about": "url('src/assets/about/about_us.png')",
-        "service" : "url('src/assets/service/service_main.png')"
+        "specialEffects" : "url('/src/assets/home/specialEffects.png')",
+        "about": "url('/src/assets/about/about_us.png')",
+        "service" : "url('/src/assets/service/service_main.png')"
       },
       backgroundColor : {
         "gradient" : "#666666"

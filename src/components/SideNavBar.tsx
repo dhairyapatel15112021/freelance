@@ -24,7 +24,7 @@ export const SideNavBar = memo(() => {
                 <div className='flex flex-col h-[17%] justify-between'>
                     <NavLink onClick={handleOnClick} to="/" className={({isActive})=> `${isActive ? `font-semibold` : `font-thin hover:scale-110`} font-poppins tracking-wide text-xl transition-transform duration-300 ease-in-out`}> Home </NavLink>
                     <NavLink onClick={handleOnClick} to="/about" className={({isActive})=> `${isActive ? `font-semibold` : `font-thin hover:scale-110`} font-poppins tracking-wide text-xl transition-transform duration-300 ease-in-out`}> About Us</NavLink>
-                    <NavLink onClick={handleOnClick} to="/service" className={({isActive})=> `${isActive ? `font-semibold` : `font-thin hover:scale-110`} font-poppins tracking-wide text-xl transition-transform duration-300 ease-in-out`}> Our Services </NavLink>
+                    <NavLink onClick={handleOnClick} to="/service/decor" className={({isActive})=> `${isActive ? `font-semibold` : `font-thin hover:scale-110`} font-poppins tracking-wide text-xl transition-transform duration-300 ease-in-out`}> Our Services </NavLink>
                 </div>
                 <div className='flex gap-x-4'>
                     <div><img src={phoneSVG} alt="phone" loading="lazy" /></div>
