@@ -24,7 +24,7 @@ export const Testimonials = () => {
         Hear From Our Clients
         {/* https://www.youtube.com/watch?v=4ehYkfh7P-I */}
       </div>
-      <div ref={targetRef} className='relative h-[1000px] md:h-[900px] w-[95vw]'>
+      <div ref={targetRef} className='relative h-[1000px] md:h-[900px] w-screen'>
         <div className='sticky top-[176px] flex items-center mt-16 overflow-hidden'>
           {/* overflow-hidden for above div */}
           <motion.div style={{x}} className='flex gap-4'>
