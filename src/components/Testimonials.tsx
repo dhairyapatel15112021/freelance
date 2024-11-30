@@ -19,14 +19,14 @@ export const Testimonials = () => {
   ]
 
   return (
-    <div className='left-0 mt-16 flex flex-col justify-center items-center'>
-      <div className='sticky top-[64px] font-cormorant font-semibold text-4xl md:text-5xl'>
+    <div className='left-0 mt-16 mb-20 flex flex-col justify-center items-center'>
+      <div className='font-cormorant font-semibold text-4xl md:text-5xl'>
         Hear From Our Clients
         {/* https://www.youtube.com/watch?v=4ehYkfh7P-I */}
       </div>
-      <div ref={targetRef} className='relative h-[1000px] md:h-[900px] w-screen'>
+      <div ref={targetRef} className='relative w-screen'>
+        {/* h-[1000px] md:h-[900px] above */}
         <div className='sticky top-[176px] flex items-center mt-16 overflow-hidden'>
-          {/* overflow-hidden for above div */}
           <motion.div style={{x}} className='flex gap-4'>
             {
               data.map((item,index)=>{
