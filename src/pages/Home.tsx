@@ -75,19 +75,19 @@ export const Home = () => {
 }
 
 
-const NavigateFirst = () => {
-  return (
-    <img src={navigateIconFirst} alt="first icon" loading="lazy"></img>
-  )
-}
+// const NavigateFirst = () => {
+//   return (
+//     <img src={navigateIconFirst} alt="first icon" loading="lazy"></img>
+//   )
+// }
 
-const NavigateSecond = () => {
-  return (
-    <img src={navigateIconSecond} alt="second icon" loading="lazy"></img>
-  )
-}
-const NavigateThird = () => {
-  return (
-    <img src={navigateIconThird} alt="Third icon" loading="lazy"></img>
-  )
-}
+// const NavigateSecond = () => {
+//   return (
+//     <img src={navigateIconSecond} alt="second icon" loading="lazy"></img>
+//   )
+// }
+// const NavigateThird = () => {
+//   return (
+//     <img src={navigateIconThird} alt="Third icon" loading="lazy"></img>
+//   )
+// }

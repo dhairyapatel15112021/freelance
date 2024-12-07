@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom"
 import testimonialIcon from "../assets/testimonial/testimonialIcon.svg"
 interface data {
   text: string,
