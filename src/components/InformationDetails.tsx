@@ -19,12 +19,12 @@ export const InformationDetails = () => {
     return (
         <div className='w-[100%] flex flex-col md:flex-row items-center justify-center mt-12 md:mt-16 gap-12 md:gap-0'>
             <div className='w-[70vw] md:w-[40vw] h-[50vh] relative top-0 left-[15vw] md:left-0'>
-                <div className='ml-[-10vw] md:mx-0 font-cormorant font-light bg-[#282828] py-2 px-4 w-[95%] md:w-[48%] md:ml-[10%] rounded-sm flex justify-center items-center gap-x-2 text-xl h-[7.14vh]'>
+                <div className='ml-[-10vw] md:mx-0 font-monserrat font-light text-black bg-light-pink py-2 px-4 w-[95%] md:w-[48%] md:ml-[10%] rounded-sm flex justify-center items-center gap-x-2 text-xl h-[7.14vh]'>
                     <div className='flex justify-center items-center w-[15%]'>
                         <Counter />
-                        <div className='font-poppins font-semibold'>+</div>
+                        <div className='font-monserrat font-semibold'>+</div>
                     </div>
-                    <div className='text-xl font-poppins font-extralight tracking-wide w-[85%]'>
+                    <div className='text-xl font-monserrat font-extralight tracking-wide w-[85%]'>
                         Years of Experience
                     </div> 
                 </div>
@@ -64,13 +64,13 @@ export const InformationDetails = () => {
                             className="absolute w-[40%] h-[7.14vh]"
                           >
                             <div
-                              className="flex font-poppins font-extralight"
+                              className="flex font-monserrat font-extralight"
                               style={{ justifyContent: index % 2 === 0 ? 'start' : 'end' }}
                             >
                               <div>{item.number}</div>
                               <div>+</div>
                             </div>
-                            <div className='font-poppins font-extralight'>{item.description}</div>
+                            <div className='font-monserrat font-extralight'>{item.description}</div>
                           </div>
                         );
                     })
@@ -98,8 +98,8 @@ const DescriptionInformation = (inputData : data)  => {
 
     return (
         <div className='flex flex-col justify-evenly'>
-            <div className='font-poppins font-light md:font-medium text-xl md:text-2xl'>{inputData.title}</div>
-            <div className='font-poppins font-extralight md:font-light text-base md:text-lg'>{inputData.subtitle}</div>
+            <div className='font-monserrat font-light md:font-medium text-xl md:text-2xl'>{inputData.title}</div>
+            <div className='font-monserrat font-extralight md:font-light text-base md:text-lg'>{inputData.subtitle}</div>
             <div className='h-[2px] bg-white'></div>
         </div>
     )

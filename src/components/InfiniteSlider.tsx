@@ -20,10 +20,10 @@ export const InfiniteSlider = () => {
     ]
   return (
     <div className="mt-10 relative w-[100vw] md:w-[80vw] overflow-hidden before:absolute before:left-0 before:top-0 before:z-[2] before:h-full before:w-[100px] before:content-[''] after:absolute after:right-0 after:top-0 after:z-[2] after:h-full after:w-[100px] after:-scale-x-100 after:content-['']">
-      <div className="animate-infinite-slider flex w-[calc(250px*10)] gap-x-10">
+      <div className="animate-infinite-slider flex w-[calc(250px*10)] gap-x-5">
         {logos.map((logo, index) => (
           <div
-            className="slide flex w-[125px] items-center justify-center"
+            className="slide flex w-[125px] px-4 py-3 items-center justify-center bg-light-pink rounded-sm"
             key={index}
           >
             {logo}
@@ -31,7 +31,7 @@ export const InfiniteSlider = () => {
         ))}
         {logos.map((logo, index) => (
           <div
-            className="slide flex w-[125px] items-center justify-center"
+            className="slide flex w-[125px] px-4 py-3 items-center justify-center bg-light-pink rounded-sm"
             key={index}
           >
             {logo}

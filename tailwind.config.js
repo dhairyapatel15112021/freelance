@@ -14,15 +14,25 @@ export default {
         "service" : "url('/src/assets/service/service_main.png')"
       },
       backgroundColor : {
-        "gradient" : "#666666"
+        "gradient" : "#666666",
+        "orange" : "#FE8F7E",
+        "light-pink" : "#FFF0EF",
+        "white" : "#ECECEC",
+        "black" : "#101010"
+      },
+      textColor : {
+        "orange" : "#FE8F7E",
+        "light-pink" : "#FFF0EF",
+        "white" : "#ECECEC",
+        "black" : "#101010"
       },
       gridTemplateColumns : {
         "new": "50% 25% 25%",
       }
       ,
       fontFamily : {
-        poppins: ['Poppins', 'sans-serif'],
-        cormorant: ['Cormorant', 'serif'],
+         "great-vibes" : "GreatVibes",
+         "monserrat" : "'Montserrat', serif"
       },
       animation : {
         ["infinite-slider"]: "infiniteSlider 20s linear infinite",

@@ -36,7 +36,7 @@ export const Header = memo(() => {
           :
           <div className="self-start justify-self-end flex gap-x-3 mx-4 col-start-3 md:mx-12 cursor-pointer" onClick={handleOnClick}>
             {
-              isMobile && <div>
+              isMobile && <div className="font-monserrat font-normal md:font-medium">
                 Menu
               </div>
             }
