@@ -11,13 +11,12 @@ export const Testimonials = () => {
 
   return (
     <div className='mt-16 mb-20 flex flex-col justify-center items-center'>
-      <div className='font-great-vibes tracking-[0.1rem] md:tracking-[0.35rem] font-semibold text-4xl md:text-5xl'>
+      <div className='font-great-vibes tracking-[0.1rem] md:tracking-[0.35rem] font-semibold text-4xl md:text-5xl self-start pl-[10vw]'>
         Hear From Our Clients
-        {/* https://www.youtube.com/watch?v=4ehYkfh7P-I */}
       </div>
       {/* <div className='relative w-screen'> */}
         {/* <div className='flex items-center mt-16 overflow-scroll bg-red-500'> */}
-          <div className='flex items-center mt-16 overflow-scroll no-scrollbar w-full gap-4'>
+          <div className='flex items-center mt-16 overflow-scroll no-scrollbar w-full gap-4 px-[5vw]'>
             {
               data.map((item,index)=>{
                 return(

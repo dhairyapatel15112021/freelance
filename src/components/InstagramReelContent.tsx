@@ -14,7 +14,7 @@ interface data {
 export const InstagramReelContent = (inputData: data) => {
   const imageData = [instagram_1, instagram_2, instagram_3, instagram_4, instagram_5, instagram_6];
   return (
-    <div className='h-[589px] w-[331.31px] relative top-0 left-[10vw] md:left-[5vw] rounded-lg flex-shrink-0'>
+    <div className='h-[589px] w-[331.31px] relative top-0 rounded-lg flex-shrink-0'>
       <Link to="https://www.instagram.com/d_effects_events_entertainment/?utm_source=ig_web_button_share_sheet" target="_blank">
         <div className="absolute top-[4%] right-[9%]">
           <img className="w-[30px] h-[30px]" src={instagramIcon} alt="instagramIcon" />
