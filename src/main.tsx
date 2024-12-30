@@ -2,7 +2,7 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.tsx'
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import { createBrowserRouter, Navigate, RouterProvider } from 'react-router-dom'
 import { Home } from './pages/Home.tsx'
 import { Services } from './pages/Services.tsx'
 import { AboutUs } from './pages/AboutUs.tsx'
@@ -21,9 +21,10 @@ const router = createBrowserRouter([
     path : '/',
     element : <App/>,
     children : [
-      {path : "" , element : <Home/>},
+      {path : "" , index : true, element : <Home/>},
       {path : "service", element : <Services/> , children : [
-        {path:"decor",element:<Decor/>},
+        {index: true, element: <Navigate to="decor" replace /> },
+        {path:"decor", element:<Decor/>},
         {path:"specialEffects",element:<SpecialEffect/>},
         {path:"weddingChoreography",element:<WeddingChoreo/>},
         {path : "corporateChoreography",element : <CorporateChore/>},

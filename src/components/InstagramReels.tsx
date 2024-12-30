@@ -8,9 +8,9 @@ export const InstagramReels = () => {
             </div>
             <div className='flex items-center mt-16 overflow-scroll no-scrollbar w-full gap-4'>
                 {
-                    Array.from({length : 5} , (_,index)=>{
+                    Array.from({length : 6} , (_,index)=>{
                         return(
-                            <InstagramReelContent index={index}/>
+                            <InstagramReelContent key={index} index={index}/>
                         )
                     })
                 }
