@@ -15,13 +15,16 @@ import dance_2 from "../assets/home/dance/dance_2.png";
 import dance_3 from "../assets/home/dance/dance_3.png";
 import dance_4 from "../assets/home/dance/dance_4.png";
 import { motion, MotionValue } from "framer-motion";
+import { Link, NavLink } from "react-router-dom";
+import { useEffect } from "react";
 
 interface data {
   index : number,
   title : string,
   description : string,
   scaleNumber : MotionValue,
-  opacityNumber : MotionValue
+  opacityNumber : MotionValue,
+  to : string
 }
 
 export const OurServiceHomeContent = (inputData : data) => {
@@ -30,27 +33,31 @@ export const OurServiceHomeContent = (inputData : data) => {
     {first : party_1,second: party_2 , third : party_3, fourth : party_4},
     {first : firework_1 , second : firework_2 , third : firework_3, fourth :firework_4},
   {first : dance_1 , second : dance_2 , third : dance_3 , fourth : dance_4}];
+  useEffect(()=>{
+    console.log(inputData);
+  },[]);
   return (
     <motion.div style={{scale : inputData.scaleNumber , opacity : inputData.opacityNumber}} className='sticky top-[15vh] md:top-[20vh] w-[100vw] h-[70vh] my-6 md:my-16 flex flex-col md:flex-row'>
         <div className='w-[100vw] md:w-[50vw] h-[20vh] md:h-full flex justify-center items-center'>
             <div className='w-[80vw] md:w-[20vw] flex flex-col gap-2'>
                 <div className='font-monserrat text-base md:text-lg font-medium md:font-semibold'>{inputData.title}</div>
                 <div className='font-monserrat text-sm md:text-base font-extralight md:font-light'>{inputData.description}</div>
-                <div className='font-monserrat text-sm md:text-base font-medium md:font-semibold'>Learn More</div>
+                <NavLink to={inputData.to} className='font-monserrat text-sm md:text-base font-medium md:font-semibold'>Learn More</NavLink>
             </div>
         </div>
         <div className='w-[80vw] mx-[10vw] md:mx-0 mt-[5vh] md:mt-0 md:w-[40vw] h-[40vh] md:h-full grid grid-rows-3 grid-cols-3'>
             <div className= "w-full h-full">
-              <img src={contentData[inputData.index].first} alt="first" className="w-full h-full rounded-md drop-shadow-shadow" />
+              <img src={contentData[inputData.index].first} alt="first" className="w-full h-full rounded-md" />
+              {/* drop-shadow-shadow */}
             </div>
             <div className=" w-full h-full">
-              <img src={contentData[inputData.index].second} alt="second" className="w-full h-full rounded-md drop-shadow-shadow"  />
+              <img src={contentData[inputData.index].second} alt="second" className="w-full h-full rounded-md"  />
             </div>
             <div className=" w-full h-full">
-              <img src={contentData[inputData.index].third} alt="third" className="w-full h-full rounded-md drop-shadow-shadow" />
+              <img src={contentData[inputData.index].third} alt="third" className="w-full h-full rounded-md" />
             </div>
             <div className='row-span-2 col-span-3 w-full h-full'>
-              <img src={contentData[inputData.index].fourth} alt="fourth" className="w-full h-full rounded-md drop-shadow-shadow"   />
+              <img src={contentData[inputData.index].fourth} alt="fourth" className="w-full h-full rounded-md"   />
             </div>
         </div>
     </motion.div>

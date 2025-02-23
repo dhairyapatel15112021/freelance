@@ -12,10 +12,10 @@ export const OurServiceHome = () => {
         target: targetRef,
         offset: ["start start", "end end"]
     });
-    const data = [{ title: "Wedding Decor", description: "From elegant centrepieces, stages to grand entrances, we design it all to match your theme and vision.", index: 0 },
-    { title: "Party & Event Decor", description: "Perfect setups for birthday bashes, anniversaries, and corporate events, tailored to every occasion.", index: 1 },
-    { title: "Fireworks & Special Effects", description: "Add a touch of magic with confetti blasts, aerial fireworks, and dry ice effects.", index: 2 },
-    { title: "Dance Choreography", description: "From Bollywood to folk, make your event come alive with our curated dance performances.", index: 3 }];
+    const data = [{ title: "Wedding Decor", description: "From elegant centrepieces, stages to grand entrances, we design it all to match your theme and vision.", index: 0,to : "/service/decor" },
+    { title: "Party & Event Decor", description: "Perfect setups for birthday bashes, anniversaries, and corporate events, tailored to every occasion.", index: 1,to : "/service/corporateChoreography" },
+    { title: "Fireworks & Special Effects", description: "Add a touch of magic with confetti blasts, aerial fireworks, and dry ice effects.", index: 2,to : "/service/specialEffects" },
+    { title: "Dance Choreography", description: "From Bollywood to folk, make your event come alive with our curated dance performances.", index: 3,to : "/service/specialEffects" }];
     const cardTimeLine = data.map((_, index) => {
         const start = (height * 3) + index * (height * 0.8) + 56 + (height * 0.05) + (!isMobile ? 24 : 64) +  index * 700;
         const end = (height * 3) + (index + 1) * (height * 0.8) + 56 + (height * 0.05) + (!isMobile ? 24 : 64) + (index + 1) * 700;
@@ -35,7 +35,7 @@ export const OurServiceHome = () => {
                     data.map((item,index) => {
                         return (
                             <>
-                            <OurServiceHomeContent scaleNumber = {animation[index+1].scale} opacityNumber = {animation[index+1].opacity} title={item.title} description={item.description} index={item.index} />
+                            <OurServiceHomeContent to={item.to} scaleNumber = {animation[index+1].scale} opacityNumber = {animation[index+1].opacity} title={item.title} description={item.description} index={item.index} />
                             <div className="w-screen h-[700px]"></div>
                             </>
                         )

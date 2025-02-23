@@ -11,7 +11,7 @@ export const Testimonials = () => {
 
   return (
     <div className='mt-16 mb-20 flex flex-col justify-center items-center'>
-      <div className='font-great-vibes tracking-[0.1rem] md:tracking-[0.35rem] font-semibold text-4xl md:text-5xl self-start pl-[10vw]'>
+      <div className='font-great-vibes tracking-[0.1rem] md:tracking-[0.35rem] font-semibold text-4xl md:text-5xl'>
         Hear From Our Clients
       </div>
       {/* <div className='relative w-screen'> */}
