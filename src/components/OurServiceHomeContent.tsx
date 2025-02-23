@@ -15,7 +15,7 @@ import dance_2 from "../assets/home/dance/dance_2.png";
 import dance_3 from "../assets/home/dance/dance_3.png";
 import dance_4 from "../assets/home/dance/dance_4.png";
 import { motion, MotionValue } from "framer-motion";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { useEffect } from "react";
 
 interface data {
