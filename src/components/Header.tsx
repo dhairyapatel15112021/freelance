@@ -5,6 +5,7 @@ import menuIcon from "../assets/menuIcon.svg";
 import removeIcon from "../assets/removeIcon.svg";
 import { useMobile } from "../hooks/useMobile";
 import { OpenContext } from "../App";
+import { Link } from "react-router-dom";
 
 export const Header = memo(() => {
   const isMobile = useMobile();
@@ -20,14 +21,14 @@ export const Header = memo(() => {
 
   return (
     <div className={`absolute top-0 left-0 w-[100%] grid grid-cols-3 place-items-center py-6 z-10`}>
-      <div className="flex gap-x-2 col-start-1 mx-4 md:mx-0 md:col-start-2">
+      <Link to="/" className="flex gap-x-2 col-start-1 mx-4 md:mx-0 md:col-start-2">
         <div>
           <img src={dlogo} alt="logo" loading="lazy" />
         </div>
         <div>
           <img src={logo} alt="logo" loading="lazy" />
         </div>
-      </div>
+      </Link>
       {
         isOpen ?
           <div className="fixed self-start justify-self-end flex gap-x-3 mx-4 col-start-3 md:mx-12 py-6 cursor-pointer" onClick={handleOnClick}>
