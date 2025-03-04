@@ -1,9 +1,15 @@
+import { useEffect } from "react";
 import { Founder } from "../components/About/Founder";
 import { Image } from "../components/About/Image"
 
 export const AboutUs = () => {
   const data = [{ name: "Name", description: "Lorem ipsum dolor sit amet consectetur. Et purus diam sed sed. Curabitur diam auctor dui pellentesque erat consectetur mi ornare vitae. Suspendisse eu montes vitae mauris mi tincidunt molestie ornare suspendisse. Bibendum mauris non" },
   { name: "Name", description: "Lorem ipsum dolor sit amet consectetur. Et purus diam sed sed. Curabitur diam auctor dui pellentesque erat consectetur mi ornare vitae. Suspendisse eu montes vitae mauris mi tincidunt molestie ornare suspendisse. Bibendum mauris non" }];
+  
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
+  
   return (
     <div>
       <Image />
@@ -31,7 +37,7 @@ export const AboutUs = () => {
           We’re here to make sure your special day is as magical as you’ve always imagined. Let’s create something unforgettable together.
         </div>
       </div>
-      
+
     </div>
   )
 }
